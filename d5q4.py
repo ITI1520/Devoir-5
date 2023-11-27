@@ -158,7 +158,7 @@ class Joueur(object):
         dans la meme ordre'''
 
         # A COMPLETER Faite
-        return self.joueur == other.joueur and self.main == other.main # Je le ses pas
+        return self.joueur == autre.joueur and self.main == autre.main # Je le ses pas
 
     def __repr__(self):
         '''
