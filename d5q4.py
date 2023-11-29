@@ -164,9 +164,12 @@ class Joueur(object):
         '''
         (Joueur) -> str
         retourne une representation de l'objet de classe Joueur'''
+        cartesR = map(repr, self.main)
+        mainR = "".join(cartesR)
 
+        reprJ = str(self.joueur)+"\n"+str(mainR)
         # A COMPLETER
-        return f"{self.joueur}\n{' '.join(map(repr, self.main))}" # Je le ses pas 
+        return  reprJ# Je le ses pas 
         
 
     def elimine_paires(self):
