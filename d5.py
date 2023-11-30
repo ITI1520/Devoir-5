@@ -1,5 +1,5 @@
 # Nom : Nicola Baker - Samuel Dicaire
-# Numéro : 300360908 -
+# Numéro : 300360908 - 300355587
 # Devoir 5
 
 
