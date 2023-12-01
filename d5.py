@@ -1,5 +1,6 @@
+# Groupe 23
 # Nom : Nicola Baker - Samuel Dicaire
-# Numéro : 300360908 - 300355587
+# Numéro étudiant : 300360908 - 300355587
 # Devoir 5
 
 
@@ -7,12 +8,13 @@
 def triangle(x):
     """  (int) -> str
     Fonction récursive qui prend un entier et retourne un dessin composé d'étoiles sous forme de triangle """
-    pyramide = ""
-
-    if 0 < x:
-        pyramide = triangle(x - 1) + '*' * x + '\n'
+    if x==1:
+        etoile=1
         
-    return pyramide
+    else: 
+        etoile=triangle(x-1) 
+    print("*"*etoile)
+    return 1+etoile
 
 # Question 2
 
@@ -26,7 +28,6 @@ def etoiles(x):
     
     else:
         pyramide = '*' * x + '\n'
-
         dessin_f = pyramide + etoiles(x - 1) + pyramide
         
         return dessin_f
@@ -40,6 +41,9 @@ def prodListePos_rec(liste, long):
     if long == 0:
         return 1
     
+    elif liste[0]>0 and long==1:
+        return liste[0]
+
     elif liste[long - 1] > 0:
         p1 = liste[long - 1] * prodListePos_rec(liste, long - 1)
         
@@ -67,7 +71,7 @@ def prodLRec1(liste):
 
 # Exemple question 1
 print("Question 1")
-print(triangle(5))
+triangle(5)
 print()
 
 # Exemple question 2
@@ -75,13 +79,12 @@ print("Question 2")
 print(etoiles(4))
 print()
 
-print("Question 3")
-# Exemples prodListePos_rec
-l = [1, -2, 5, 0, 6, -5]
-print(prodListePos_rec(l, len(l)))  
-print(prodLRec1(l))                 
 
-# Exemple prodListePos_rec
+# Exemples prodListePos_rec Q3
+print("Question 3")
 l = [1, -2, 5, 0, 6, -5]
+print(prodListePos_rec(l, len(l)))
+print(prodLRec1(l))                 
+l = []
 print(prodListePos_rec(l, len(l)))  
 print(prodLRec1(l))                 

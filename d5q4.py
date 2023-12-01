@@ -1,5 +1,6 @@
+# Groupe 23
 # Nom : Nicola Baker - Samuel Dicaire
-# Numéro : 300360908 - 300355587
+# Numéro étudiant : 300360908 - 300355587
 # Devoir 5
 # Jeu de cartes appelé "Pouilleux" 
 import random
@@ -158,18 +159,23 @@ class Joueur(object):
         dans la meme ordre'''
 
         # A COMPLETER Faite
-        return self.joueur == autre.joueur and self.main == autre.main # Je le ses pas
+        egal = self.joueur == autre.joueur and autre.main == self.main
+        return egal
 
     def __repr__(self):
         '''
         (Joueur) -> str
         retourne une representation de l'objet de classe Joueur'''
-        cartesR = map(repr, self.main)
+        # A COMPLETER Faite
+        cartesR = []
+        for x in self.main:
+            cartesR = repr(x)
+            cartesR.append(cartesR)
+        #cartesR = map(repr, self.main)
         mainR = "".join(cartesR)
 
-        reprJ = str(self.joueur)+"\n"+str(mainR)
-        # A COMPLETER
-        return  reprJ# Je le ses pas 
+        reprJ = str(self.joueur)+"\n"+mainR
+        return  reprJ
         
 
     def elimine_paires(self):
