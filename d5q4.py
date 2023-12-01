@@ -171,7 +171,6 @@ class Joueur(object):
         for x in self.main:
             cartesR = repr(x)
             cartesR.append(cartesR)
-        #cartesR = map(repr, self.main)
         mainR = "".join(cartesR)
 
         reprJ = str(self.joueur)+"\n"+mainR
