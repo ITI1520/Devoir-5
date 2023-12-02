@@ -3,6 +3,7 @@
 # Numéro étudiant : 300360908 - 300355587
 # Devoir 5
 # Jeu de cartes appelé "Pouilleux" 
+
 import random
 
 
@@ -120,7 +121,6 @@ class Joueur(object):
         '''(Joueur, str)-> None
         constructeur qui initialise le nom du joueur avec la chaine des caracteres joueur
         et la liste de cartes avec liste vide'''
-        # A COMPLETER FAITE
         self.joueur = joueur
         self.main = []
 
@@ -129,7 +129,6 @@ class Joueur(object):
         '''(Joueur, Carte) -> None
         ajoute une carte a la liste main'''
         
-        # A COMPLETER FAITE
         self.main.append(carte)
 
     def affiche_cartes(self):
@@ -138,7 +137,6 @@ class Joueur(object):
         Affiche le nom et les éléments de la main du joueur séparées par d'espaces
         '''
 
-        # A COMPLETER FAITE
         print(self.joueur)
         for i in self.main:
             print(i, end=" ")
@@ -149,7 +147,6 @@ class Joueur(object):
         '''(Joueur, Carte) -> None
         elimine une carte de la liste self.main'''
 
-        # A COMPLETER FAiTE
         self.main.remove(carte)
        
       
@@ -157,8 +154,6 @@ class Joueur(object):
         '''(Joueur,Joueur)->bool
         retourne True si les main ont les meme cartes
         dans la meme ordre'''
-
-        # A COMPLETER Faite
         egal = self.joueur == autre.joueur and autre.main == self.main
         return egal
 
@@ -166,7 +161,6 @@ class Joueur(object):
         '''
         (Joueur) -> str
         retourne une representation de l'objet de classe Joueur'''
-        # A COMPLETER Faite
         cartesR = []
         for x in self.main:
             cartesR = repr(x)

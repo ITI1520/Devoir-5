@@ -35,7 +35,7 @@ def etoiles(x):
 # Question 3
 
 def prodListePos_rec(liste, long):
-    """ (List, len) -> int
+    """ (List, int) -> int
      Fonction qui prend une liste un la longueur de la liste et qui retourne le produit de tout les nombre >0 dans la liste """
     
     if long == 0:
@@ -55,7 +55,8 @@ def prodListePos_rec(liste, long):
         return p2
 
 def prodLRec1(liste):
-    
+    """ (List) -> int
+     Fonction qui prend une liste et qui retourne le produit de tout les nombre >0 dans la liste """
     if len(liste) == 0:
         return 1
     
