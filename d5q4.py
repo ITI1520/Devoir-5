@@ -163,7 +163,7 @@ class Joueur(object):
         retourne une representation de l'objet de classe Joueur'''
         cartesR = []
         for x in self.main:
-            cartesR = repr(x)
+            cartesR = self.main[x]
             cartesR.append(cartesR)
         mainR = str(cartesR)
 

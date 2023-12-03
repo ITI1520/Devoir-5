@@ -10,7 +10,6 @@ def triangle(x):
     Fonction récursive qui prend un entier et retourne un dessin composé d'étoiles sous forme de triangle """
     if x==1:
         etoile=1
-        
     else: 
         etoile=triangle(x-1) 
     print("*"*etoile)
@@ -24,13 +23,13 @@ def etoiles(x):
         d'une longeur dépendante du nombre donné et utilise le symbole * pour le faire """
     
     if x <= 0:
-        return ""
+        dessin_f= ""
     
     else:
         pyramide = '*' * x + '\n'
         dessin_f = pyramide + etoiles(x - 1) + pyramide
         
-        return dessin_f
+    return dessin_f
       
 # Question 3
 
@@ -79,7 +78,6 @@ print()
 print("Question 2")
 print(etoiles(4))
 print()
-
 
 # Exemples prodListePos_rec Q3
 print("Question 3")
